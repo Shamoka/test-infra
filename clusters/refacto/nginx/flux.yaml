@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: nginx
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: flux-system
+  interval: 5m0s
+  path: ./clusters/refacto/nginx/manifests
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
