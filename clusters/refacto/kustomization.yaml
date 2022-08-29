@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - flux-system/
   - nginx/flux.yaml
-  - refacto/
+  - refacto/flux.yaml
